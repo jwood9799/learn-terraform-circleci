@@ -1,5 +1,11 @@
 terraform {
-  cloud {}
+  cloud {
+    organization = "Practice-Workspace"
+
+    workspaces {
+      name = "learn-terraform-circleci"
+    }
+  }
 
   required_providers {
     aws = {
